@@ -2,7 +2,7 @@ pipeline
 {
 
 agent {
-  label 'DevServer'
+  label 'ubuntu-git'
 }
 
 tools {
