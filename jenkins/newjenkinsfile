@@ -4,6 +4,10 @@ pipeline {
         label 'ubuntu-git'
     }
 
+    tools {
+  maven 'mymaven'
+}
+
     stages {
         stage('build') {
             steps {
