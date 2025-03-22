@@ -1,9 +1,8 @@
 pipeline {
     
     agent {
-  label 'ubuntu-git'
-}
-
+        label 'ubuntu-git'
+    }
 
     stages {
         stage('build') {
@@ -11,11 +10,10 @@ pipeline {
                 sh 'mvn clean package'
             }
             post {
-             success {
-                archiveArtifacts artifacts: '**/target/*.war', 
-  }
-}
+                success {
+                    archiveArtifacts artifacts: '**/target/*.war'
+                }
+            }
         }
-        
     }
 }
